@@ -81,11 +81,7 @@ public class ConstanteDeKaprekar {
 		    if(raw.equals(KAPREKAR_STRING)) {
 		    	
 		    	counter = 0;
-		    	
-		    	//Test//
-		    	System.out.println("Inside 6174!");
-		    	//\Test
-		    	
+
 		    //If the raw is a repdigit, then it turns to 8	
 		    }else {
 		    	
@@ -135,6 +131,7 @@ public class ConstanteDeKaprekar {
 		    
 		    System.out.println("counter: " + counter);
 		    
+		    //We restart the counter, so it doesn't go adding up every iteration
 		    counter = 0;
 			
 		}//End for
