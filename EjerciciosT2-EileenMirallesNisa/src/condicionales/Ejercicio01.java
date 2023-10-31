@@ -35,7 +35,7 @@ public class Ejercicio01 {
 		/* Pedimos al Usuario si quiere realizar pruebas (introducirá -1), o quiere utilizar la aplicación
 		 * (introducirá 1). En caso de que quiera Pruebas le conduciremos a un bucle que "introducirá" en
 		 * la aplicación todos los datos del array. */
-		
+		System.out.println("Introduce");
 		
 		
 	}
