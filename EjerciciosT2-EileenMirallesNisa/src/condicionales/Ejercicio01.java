@@ -36,6 +36,8 @@ public class Ejercicio01 {
 		 * (introducirá 1). En caso de que quiera Pruebas le conduciremos a un bucle que "introducirá" en
 		 * la aplicación todos los datos del array. */
 		
+		
+		
 	}
 
 }
