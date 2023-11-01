@@ -20,7 +20,7 @@ public class Ejercicio02 {
 		 * y otra que será el resultado del modulo, y la letra */
 		int dniNum;
 		int modulo;
-		char letra;
+		char letra = 'a';
 		
 		/* Apertura de Scanner */
 		Scanner sc = new Scanner(System.in);
@@ -45,120 +45,125 @@ public class Ejercicio02 {
 		
 		case 1: 
 			
-			letra = 'T';
+			letra = 'R';
 			break;
 		
 		case 2: 
 			
-			letra = 'T';
+			letra = 'W';
 			break;
 		
 		case 3: 
 			
-			letra = 'T';
+			letra = 'A';
 			break;
 		
 		case 4: 
 			
-			letra = 'T';
+			letra = 'G';
 			break;
 		
 		case 5: 
 			
-			letra = 'T';
+			letra = 'M';
 			break;
 		
 		case 6: 
 			
-			letra = 'T';
+			letra = 'Y';
 			break;
 		
 		case 7: 
 			
-			letra = 'T';
+			letra = 'F';
 			break;
 		
 		case 8: 
 			
-			letra = 'T';
+			letra = 'P';
 			break;
 		
 		case 9: 
 			
-			letra = 'T';
+			letra = 'D';
 			break;
 		
 		case 10: 
 			
-			letra = 'T';
+			letra = 'X';
 			break;
 		
 		case 11: 
 			
-			letra = 'T';
+			letra = 'B';
 			break;
 		
 		case 12: 
 			
-			letra = 'T';
+			letra = 'N';
 			break;
 		
 		case 13: 
 			
-			letra = 'T';
+			letra = 'J';
 			break;
 		
 		case 14: 
 			
-			letra = 'T';
+			letra = 'Z';
 			break;
 		
 		case 15: 
 			
-			letra = 'T';
+			letra = 'S';
 			break;
 		
 		case 16: 
 			
-			letra = 'T';
+			letra = 'Q';
 			break;
 		
 		case 17: 
 			
-			letra = 'T';
+			letra = 'V';
 			break;
 		
 		case 18: 
 			
-			letra = 'T';
+			letra = 'H';
 			break;
 		
 		case 19: 
 			
-			letra = 'T';
+			letra = 'L';
 			break;
 		
 		case 20: 
 			
-			letra = 'T';
+			letra = 'C';
 			break;
 		
 		case 21: 
 			
-			letra = 'T';
+			letra = 'K';
 			break;
 		
 		case 22: 
 			
-			letra = 'T';
+			letra = 'E';
 			break;
 		
 		default:
 			
 			System.out.println("Something went wrong");
 			
-		}// Fin switch
+		}// Fin Switch
+		
+		/* Syso de Respuesta */
+		System.out.println("La letra correspondiente al número introducido de DNI es " + letra);
 			
+		/* Cierre del Scanner */
+		sc.close();
 
 	}
 
