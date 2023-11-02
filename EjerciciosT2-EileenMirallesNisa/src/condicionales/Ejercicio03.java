@@ -12,6 +12,16 @@ public class Ejercicio03 {
 	 * cada uno de los animales. 
 	 * Nota: Evita que la aplicación realice divisiones por cero.
 	 **/
+	
+	/* Pruebas */
+	/* Comienzo Pruebas -->
+	 * Entrada: 20, 5, 10 	| Salida Esperada: Todo Bien 	| Salida Obtenida: Todo Bien
+	 * Entrada: 20, 0, 10 	| Salida Esperada: Error		| Salida Obtenida: Error
+	 * Entrada: -5 , 5, 10 	| Salida Esperada: Error		| Salida Obtenida: Error
+	 * Entrada: 20, 5, 0 	| Salida Esperada: Error		| Salida Obtenida: Error
+	 * Entrada: 10, 5, 20 	| Salida Esperada: Ración de 2	| Salida Obtenida: Ración de 2
+	 * Fin Pruebas
+	 */
 
 	public static void main(String[] args) {
 
@@ -29,7 +39,7 @@ public class Ejercicio03 {
 		/* Syso de Información y Recogida de Datos */
 		System.out.println("En una granja se compra diariamente una cantidad de comida para los animales. Los animales son todos "
 				+ "de la misma especie\r\n"
-				+ "	y sabemos que cada animal come los mismos kilos de comida de media diariamente.");
+				+ "y sabemos que cada animal come los mismos kilos de comida de media diariamente.");
 		
 		//Comida Comprada
 		System.out.println("Introduce la cantidad de comida comprada: ");
@@ -45,20 +55,29 @@ public class Ejercicio03 {
 		
 		/* Algoritmo */
 		/* Con un IF vamos a ver si hay suficiente comida para todos los animales, y si no, 
-		 * calcularemos la ración que le corresponde a cada animal */
-		if (comidaComprada >= comidaConsumidaTotal) {
+		 * calcularemos la ración que le corresponde a cada animal, pero primero vamos a 
+		 * comprobar si los valores introducidos tienen sentido */
+		if (comidaComprada < 0 || comidaConsumidaTotal <= 0 || numAnimales <= 0) {
 			
-			System.out.println("Todo bien en la granja");
+			System.out.println("Los datos introducidos no tienen sentido.");
 			
-		}else{
+		}else {
+		
+			if (comidaComprada >= comidaConsumidaTotal) {
+				
+				System.out.println("Todo bien en la granja");
+				
+			}else{
+				
+				System.out.println("Uh-oh, falta comida");
+				
+				comidaConsumidaRacion = comidaComprada / numAnimales;
+				
+				System.out.println("A cada animal le toca de comer " + comidaConsumidaRacion);
+				
+			}//Fin IF Comida
 			
-			System.out.println("Uh-oh, falta comida");
-			
-			comidaConsumidaRacion = comidaComprada / numAnimales;
-			
-			System.out.println("A cada animal le toca de comer " + comidaConsumidaRacion);
-			
-		}//Fin IF Comida
+		}//Fin IF --> Datos Validos
 		
 		/* Cierre de Scanner */
 		sc.close();

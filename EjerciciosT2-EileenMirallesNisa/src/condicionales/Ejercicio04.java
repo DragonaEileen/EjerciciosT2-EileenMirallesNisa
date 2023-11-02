@@ -9,6 +9,18 @@ public class Ejercicio04 {
 	
 	/* Para no tener que hacer un switch de 99 casos, vamos a dividir los numeros introducidos
 	 * en decenas y centenas. Con exceptción de los numeros del diez al treinta, que tienen que ser casos aparte. */
+	
+	/* Pruebas */
+	/* Comienzo Pruebas -->
+	 * Entrada: -5 		| Salida Esperada: Error 			| Salida Obtenida: Error
+	 * Entrada: 100 	| Salida Esperada: Error			| Salida Obtenida: Nada
+	 * 		Error: Faltaba el Default del switchcase de las decenas 
+	 * Entrada: 100 	| Salida Esperada: Error			| Salida Obtenida: Error 
+	 * Entrada: 15 		| Salida Esperada: quince			| Salida Obtenida: quince
+	 * Entrada: 22	 	| Salida Esperada: veintidos		| Salida Obtenida: veintidos
+	 * Entrada: 56	 	| Salida Esperada: cincuenta y seis	| Salida Obtenida: cincuenta y seis   
+	 * Fin Pruebas
+	 */
 
 	public static void main(String[] args) {
 
@@ -194,6 +206,11 @@ public class Ejercicio04 {
 		case 9:
 			
 			decenas = "noventa";
+			break;
+			
+		default:
+			
+			System.out.println("Something weird happened");
 			break;
 			
 		}//Fin Switch Decenas

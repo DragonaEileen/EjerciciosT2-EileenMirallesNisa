@@ -6,6 +6,14 @@ public class Ejercicio05 {
 	
 	/** Utiliza un operador ternario para calcular el valor absoluto de un número 
 	 * que se solicita al usuario por teclado. **/
+	
+	/* Pruebas */
+	/* Comienzo Pruebas -->
+	 * Entrada: 0 		| Salida Esperada: 0 		| Salida Obtenida: -0.0
+	 * Entrada: -5 		| Salida Esperada: 5.0		| Salida Obtenida: 5.0 
+	 * Entrada: 53.34 	| Salida Esperada: 53.34	| Salida Obtenida: 53.34 
+	 * Fin Pruebas
+	 */
 
 	public static void main(String[] args) {
 
