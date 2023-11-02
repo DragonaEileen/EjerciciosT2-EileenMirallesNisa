@@ -37,6 +37,11 @@ public class Ejercicio04 {
 		
 		switch(numU) {
 		
+		case 0:
+			
+			unidades = "";
+			break;
+		
 		case 1:
 			
 			unidades = "uno";
@@ -90,10 +95,15 @@ public class Ejercicio04 {
 		}// Fin Switch Unidades
 		
 		switch (numD) {
-		case 0, 1, 2:
+		case 0:
 			
-			simple = true;
+			decenas = "";
+			break;
 		
+		case 1, 2:
+		
+			simple = true;
+			
 			switch(num) {
 			
 			case 10:
@@ -126,21 +136,97 @@ public class Ejercicio04 {
 				decenas = "quince";
 				break;
 				
-			case 16:
+			case 16, 17, 18, 19:
 				
-				decenas = "dieciseis";
+				decenas = "diec";
 				break;
 				
+			case 20:
+				
+				simple = false;
+				decenas = "veinte";
+				break;
+				
+			case 21, 22, 23, 24, 25, 26, 27, 28, 29:
+				
+				decenas = "veint";
+				break;
+				
+			default:
+				
+				System.out.println("Something weird happened");
+				break;
 			
 			}// Fin Switch Simples
+			
+			break;
 		
 		case 3:
 			
-		
-		}
+			decenas = "treinta";
+			break;
+			
+		case 4:
+			
+			decenas = "cuarenta";
+			break;
+			
+		case 5:
+			
+			decenas = "cincuenta";
+			break;
+			
+		case 6:
+			
+			decenas = "sesenta";
+			break;
+			
+		case 7:
+			
+			decenas = "setenta";
+			break;
+			
+		case 8:
+			
+			decenas = "ochenta";
+			break;
+			
+		case 9:
+			
+			decenas = "noventa";
+			break;
+			
+		}//Fin Switch Decenas
 	
-
 		/* Syso de Respuesta */
+		/* Con un IF vamos a ver si es cardinal simple o no */
+		if (simple == true) {
+			
+			/* Y otro IF para ver si es mayor o menor de 15 */
+			if (num > 15) {
+				
+				System.out.println(decenas + "i" + unidades);
+				
+			}else{
+				
+				System.out.println(decenas);
+				
+			}//Fin IF >15
+			
+		}else{
+			
+			/* Otro IF por si solo hay decenas o unidades */
+			if (numD == 0 || numU == 0) {
+				
+				System.out.println(decenas + unidades);
+				
+			}else{
+				
+				System.out.println(decenas + " y " + unidades);
+				
+			}//Fin IF num = 0
+			
+		}//Fin IF simple
 		
 		/* Cierre de Scanner */
 		sc.close();
