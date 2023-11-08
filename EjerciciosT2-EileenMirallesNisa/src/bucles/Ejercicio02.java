@@ -10,7 +10,9 @@ public class Ejercicio02 {
 	
 	/* Pruebas */
 	/* Comienzo Pruebas -->
-	 * Entrada: 23, 59, 59, 1	| Salida Esperada: 0, 0, 0	| Salida Obtenida: 0, 0, 0
+	 * Entrada: 7	| Salida Esperada: 2, 3, 5, 7	| Salida Obtenida: 2, 3, 5, 7	
+	 * Entrada: hola| Salida Esperada: Exception	| Salida Obtenida: Exception
+	 * Entrada: -3	| Salida Esperada: Reintroduce	| Salida Obtenida: Reintroduce
 	 * Fin Pruebas
 	 */
 
@@ -18,9 +20,11 @@ public class Ejercicio02 {
 
 		/* Declaración de variables */
 		/* Declaramos la variable n, el número que se pide al usuario; 
-		 * luego una variable booleana que indique si un numero es primo */
+		 * luego una variable booleana que indique si un numero es primo
+		 * Como prueba, vamos a probar a hacer un contador de divisibles.
+		 * Si es solo divisible entre 2 numeros, 1 y si mismo, entonces es primo */
 		int inputN = 0;
-		boolean prime = true;
+		int counter = 0;
 		
 		/* Apertura de Scanner */
 		Scanner sc = new Scanner(System.in);
@@ -48,39 +52,32 @@ public class Ejercicio02 {
 		}while(inputN <= 1);
 		
 		/* Algoritmo */
-		/* Mediante un bucle FOR vamos a ir comprobando que el número sea primo */
-		for(int i = 1; i <= inputN; i++) {
+		/* Mediante Bucles */
+		for (int i = 1; i <= inputN; i ++) {
 			
-			//Comprobamos si es primo			
-			for(int j = 2; j < i ; j++) {
+			for (int j = 1; j <= i; j++) {
 				
-				//Si no es primo
-				if (i%j == 0){
+				if (i%j == 0) {
 					
-					prime = false;
-					break;
+					counter = counter + 1;
 					
-				}else {
-					
-					prime = true;
-					
-				}//Fin IF --> Primos
+				}//Fin IF --> Prime
 				
-			}//Fin FOR --> Primos
+			}//Fin FOR Interno
 			
-			// Syso si es primo
-			if (prime == true) {
+			if (counter == 2) {
 				
 				System.out.println(i);
-				prime = false; //Reset prime
 				
-			}//Fin IF --> Syso Prime
+			}//Fin IF Counter check
 			
-		}//Fin FOR --> 'Til inputN
+			counter = 0; 	//Reset counter
+			
+		}//Fin FOR Externo
 		
 		/* Cierre de Scanner */
 		sc.close();
 		
-	}//Fin Main
+	}//Fin main
 
 }
