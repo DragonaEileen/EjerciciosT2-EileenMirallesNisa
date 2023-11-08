@@ -1,7 +1,6 @@
 package bucles;
 
 import java.util.InputMismatchException;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Ejercicio01 {
@@ -47,16 +46,34 @@ public class Ejercicio01 {
 		//Horas
 		do {
 			
-			System.out.print("Horas: ");
-			horas = sc.nextByte();
+			try {
+				
+				System.out.print("Horas: ");
+				horas = sc.nextByte();
+				
+			} catch (InputMismatchException e) {
+				
+				System.err.println("El dato Introducido no tiene sentido");
+				sc.next();
+				
+			}//Fin Try-Catch
 			
 		}while(horas < 0 || horas >= 24);
 		
 		//Minutos
 		do {
 			
-			System.out.print("Minutos: ");
-			minutos = sc.nextByte();
+			try {
+				
+				System.out.print("Minutos: ");
+				minutos = sc.nextByte();
+				
+			} catch (InputMismatchException e) {
+				
+				System.err.println("El dato Introducido no tiene sentido");
+				sc.next();
+				
+			}//Fin Try-Catch
 			
 		}while(minutos < 0 || minutos >= 60);
 			
