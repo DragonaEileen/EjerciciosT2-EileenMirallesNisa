@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio04 {
@@ -25,8 +26,8 @@ public class Ejercicio04 {
 		/* Declaración de Variables */
 		/* Declaramos los dos números a introducir y una variable
 		 * donde pondremos el menor */
-		long inputA;
-		long inputB;
+		long inputA = 0;
+		long inputB = 0;
 		long lesser;
 		
 		/* Apertura de Scanner */
@@ -37,8 +38,20 @@ public class Ejercicio04 {
 				+ "común divisor mediante el algoritmo del enunciado.");
 		
 		//Número A
-		System.out.print("Introduce el número A: ");
-		inputA = sc.nextLong();
+		do {
+		
+			try {
+			
+				System.out.print("Introduce el número A: ");
+				inputA = sc.nextLong();
+				
+			}catch(InputMismatchException e) {
+				
+				System.err.println("Dato introducido erróneo.");
+				
+			}
+		
+		}while(inputA<1);
 		
 		//Número B
 		System.out.print("Introduce el número B: ");
