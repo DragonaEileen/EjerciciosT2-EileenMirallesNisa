@@ -54,9 +54,17 @@ public class Ejercicio04 {
 		 * NO es menor, O son iguales, será B. Da igual que sean iguales
 		 * porque como empezaría a comprobar el B, dividiría los dos 
 		 * números */
-		lesser = inputA < inputB ? inputA : inputB;
-		
 		/* Mediante el bucle FOR descendemos desde lesser */
+		for(lesser = inputA < inputB ? inputA : inputB; lesser > 0; lesser-- ) {
+			
+			if (inputA % lesser == 0 && inputB % lesser == 0) {
+				
+				System.out.println("El maximo comun divisor es " + lesser);
+				break;
+				
+			}//Fin IF
+			
+		}//Fin FOR
 		
 	}
 
