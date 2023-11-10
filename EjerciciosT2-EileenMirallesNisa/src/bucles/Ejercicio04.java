@@ -14,8 +14,8 @@ public class Ejercicio04 {
 	
 	/* Pruebas */
 	/* Comienzo Pruebas -->
-	 * Entrada: 7	| Salida Esperada: Pyramid of 7	| Salida Obtenida: Pyramid of 7	
-	 * Entrada: hola| Salida Esperada: Exception	| Salida Obtenida: Exception
+	 * Entrada: 800, 80	| Salida Esperada: 80	| Salida Obtenida: 80
+	 * Entrada: 48, 60	| Salida Esperada: 12	| Salida Obtenida: 12
 	 * Entrada: -3	| Salida Esperada: Reintroduce	| Salida Obtenida: Reintroduce
 	 * Fin Pruebas
 	 */
