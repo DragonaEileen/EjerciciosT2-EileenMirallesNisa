@@ -15,9 +15,9 @@ public class Ejercicio04 {
 	
 	/* Pruebas */
 	/* Comienzo Pruebas -->
-	 * Entrada: 800, 80	| Salida Esperada: 80	| Salida Obtenida: 80
-	 * Entrada: 48, 60	| Salida Esperada: 12	| Salida Obtenida: 12
-	 * Entrada: -3	| Salida Esperada: Reintroduce	| Salida Obtenida: Reintroduce
+	 * Entrada: 800, 80	| Salida Esperada: 80			| Salida Obtenida: 80
+	 * Entrada: 48, 60	| Salida Esperada: 12			| Salida Obtenida: 12
+	 * Entrada: -3, 0		| Salida Esperada: Reintroduce	| Salida Obtenida: Reintroduce
 	 * Fin Pruebas
 	 */
 
@@ -54,8 +54,20 @@ public class Ejercicio04 {
 		}while(inputA<1);
 		
 		//Número B
-		System.out.print("Introduce el número B: ");
-		inputB = sc.nextLong();
+		do {
+			
+			try {
+			
+				System.out.print("Introduce el número B: ");
+				inputB = sc.nextLong();
+				
+			}catch(InputMismatchException e) {
+				
+				System.err.println("Dato introducido erróneo.");
+				
+			}
+		
+		}while(inputB<1);
 		
 		/* Algoritmo */
 		/* Desde el menor de a y b, ir buscando, de forma decreciente
@@ -67,7 +79,8 @@ public class Ejercicio04 {
 		 * NO es menor, O son iguales, será B. Da igual que sean iguales
 		 * porque como empezaría a comprobar el B, dividiría los dos 
 		 * números */
-		/* Mediante el bucle FOR descendemos desde lesser */
+		/* Mediante el bucle FOR descendemos desde lesser
+		 * NOTA:el ternario mencionado antes se forma en la inicialización del FOR */
 		for(lesser = inputA < inputB ? inputA : inputB; lesser > 0; lesser-- ) {
 			
 			if (inputA % lesser == 0 && inputB % lesser == 0) {
@@ -78,6 +91,9 @@ public class Ejercicio04 {
 			}//Fin IF
 			
 		}//Fin FOR
+		
+		/* Cierre Scanner */
+		sc.close();
 		
 	}
 
