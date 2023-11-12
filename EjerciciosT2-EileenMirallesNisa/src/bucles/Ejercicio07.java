@@ -10,7 +10,7 @@ public class Ejercicio07 {
 	/* Pruebas */
 	/* Comienzo Pruebas -->
 	 * Entrada: 1		| Salida Esperada: 1				| Salida Obtenida: 1
-	 * Entrada: 5		| Salida Esperada: Hasta 5 5 5 5 5	| Salida Obtenida: Hasta 5 5 5 5 5
+	 * Entrada: 25		| Salida Esperada: Hasta 25			| Salida Obtenida: Hasta 25
 	 * Entrada: -3 o 25	| Salida Esperada: Reintroduce		| Salida Obtenida: Reintroduce
 	 * Fin Pruebas
 	 */
@@ -58,9 +58,9 @@ public class Ejercicio07 {
 			for (int j = 1; j <= 1 + ((i-1)*2); j++) {
 				
 				if(j <= i) {
-					System.out.print(j);
+					System.out.print(j + " ");
 				}else {
-					System.out.print(j - (auxCount*2));
+					System.out.print(j - (auxCount*2) + " ");
 					auxCount = (byte) (auxCount + 1);
 				}
 				
